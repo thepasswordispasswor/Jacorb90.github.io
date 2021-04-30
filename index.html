@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<title>Jacorb's Games</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="js/break_eternity.js"></script>
+	<script type="text/javascript" src="js/OmegaNum.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body onload="loadVue()">
+	<div id="app">
+		<div id="titleBanner"><div style="height: calc(50% - 45px);"></div><span class="jac">JACORB'S  GAMES</span></div>
+		<div style="min-height: calc(100% - 130px); background-color: purple;">
+			<br>
+			<i>Note: Only sites starting with <b>jacorb90.github.io/...</b> give score (updates on reload)</i>
+			<br>
+			<h2>Total Score: {{OVERALL_DATA.totalScore}} / {{OVERALL_DATA.totalScoreLimit}}</h2><br>
+			<h1>Main Games</h1><br>
+			<table>
+				<tr>
+					<td v-for="data in MAIN_GAMES" style="width: 200px; height: 200px; margin: 0px 0px 20px 20px; background-color: black; border: 3px solid white;">
+						<span v-if="data.id!='ngp3c'"><br></span><h3>{{data.title}}</h3><br>
+						{{data.score()}} / {{data.scoreLimit}}<br><br>
+						<a class="btnlink" v-bind:href="data.url" target="_blank"><div style="margin-top: calc(50% - 30px)">PLAY</div></a>
+						<br><br>
+					</td>
+				</tr>
+			</table><br>
+			<h1>Side Projects</h1><br>
+			<table>
+				<tr>
+					<td v-for="data in SIDE_PROJECTS" style="width: 200px; height: 200px; margin: 0px 0px 20px 20px; background-color: black; border: 3px solid white;">
+						<span><br></span><h3>{{data.title}}</h3><br>
+						{{data.score()}} / {{data.scoreLimit}}<br><br>
+						<a class="btnlink" v-bind:href="data.url" target="_blank"><div style="margin-top: calc(50% - 30px)">PLAY</div></a>
+						<br><br>
+					</td>
+				</tr>
+			</table><br>
+			<h1>Completed Projects</h1><br>
+			<table>
+				<tr>
+					<td v-for="data in COMPLETED_GAMES" style="width: 200px; height: 200px; margin: 0px 0px 20px 20px; background-color: black; border: 3px solid white;">
+						<span><br></span><h3>{{data.title}}</h3><br>
+						{{data.score()}} / {{data.scoreLimit}}<br><br>
+						<a class="btnlink" v-bind:href="data.url" target="_blank"><div style="margin-top: calc(50% - 30px)">PLAY</div></a>
+						<br><br>
+					</td>
+				</tr>
+			</table><br>
+			<br><br><br>
+		</div>
+	</div>
+	<!-- I'd look through the other files if I were you ;) -->
+</body>
