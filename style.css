@@ -106,15 +106,6 @@ button.bought {
 	cursor: pointer;
 }
 
-.inv {
-	filter: invert(100%);
-}
-
-.btnlink.inv:hover {
-	filter: invert(75%);
-	cursor: pointer;
-}
-
 #titleBanner {
 	height: 125px;
 	background-color: #9e95a3;

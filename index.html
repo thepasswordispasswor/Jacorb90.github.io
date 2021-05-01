@@ -12,18 +12,20 @@
 </head>
 <body onload="loadVue()">
 	<div id="app">
-		<div id="titleBanner"><div style="height: calc(50% - 45px);"></div><span class="jac">JACORB'S  GAMES</span><a class="btnlink inv" href="http://discord.gg/wwQfgPa" target="_blank" style="position: absolute; top: 5px; left: 5px; font-size: 15px;"><div style="margin-top: calc(50% - 25px)">DISCORD</div></a></div>
+		<div id="titleBanner"><div style="height: calc(50% - 45px);"></div><span class="jac">JACORB'S  GAMES</span>
+		<a class="btnlink" href="http://discord.gg/wwQfgPa" target="_blank" style="position: absolute; top: 5px; left: 5px; font-size: 15px; background-color: #36393e; color: white; text-shadow: 0px 0px 7px black; height: 50px;"><div style="margin-top: calc(50% - 20px)">DISCORD</div></a>
+		<a class="btnlink" href="http://patreon.com/Jacorb90" target="_blank" style="position: absolute; top: 65px; left: 5px; font-size: 15px; background-color: #eb6b34; height: 50px;"><div style="margin-top: calc(50% - 20px)">PATREON</div></a></div>
 		<div style="min-height: calc(100% - 130px); background-color: purple;">
 			<br>
 			<i>Note: Only sites starting with <b>jacorb90.github.io/...</b> give score (updates on reload)</i>
 			<br>
-			<h2>Total Score: {{OVERALL_DATA.totalScore}} / {{OVERALL_DATA.totalScoreLimit}}</h2><br>
+			<h2>Total Game Score: {{OVERALL_DATA.totalScore}} / {{OVERALL_DATA.totalScoreLimit}}</h2><br>
 			<h1>Main Games</h1><br>
 			<table>
 				<tr>
 					<td v-for="data in MAIN_GAMES" style="width: 200px; height: 200px; margin: 0px 0px 20px 20px; background-color: black; border: 3px solid white;">
 						<span v-if="data.id!='ngp3c'"><br></span><h3>{{data.title}}</h3><br>
-						{{data.score()}} / {{data.scoreLimit}}<br><br>
+						Game Score: {{data.score()}} / {{data.scoreLimit}}<br><br>
 						<a class="btnlink" v-bind:href="data.url" target="_blank"><div style="margin-top: calc(50% - 30px)">PLAY</div></a>
 						<br><br>
 					</td>
@@ -34,7 +36,7 @@
 				<tr>
 					<td v-for="data in SIDE_PROJECTS" style="width: 200px; height: 200px; margin: 0px 0px 20px 20px; background-color: black; border: 3px solid white;">
 						<span><br></span><h3>{{data.title}}</h3><br>
-						{{data.score()}} / {{data.scoreLimit}}<br><br>
+						Game Score: {{data.score()}} / {{data.scoreLimit}}<br><br>
 						<a class="btnlink" v-bind:href="data.url" target="_blank"><div style="margin-top: calc(50% - 30px)">PLAY</div></a>
 						<br><br>
 					</td>
@@ -45,7 +47,7 @@
 				<tr>
 					<td v-for="data in COMPLETED_GAMES" style="width: 200px; height: 200px; margin: 0px 0px 20px 20px; background-color: black; border: 3px solid white;">
 						<span><br></span><h3>{{data.title}}</h3><br>
-						{{data.score()}} / {{data.scoreLimit}}<br><br>
+						Game Score: {{data.score()}} / {{data.scoreLimit}}<br><br>
 						<a class="btnlink" v-bind:href="data.url" target="_blank"><div style="margin-top: calc(50% - 30px)">PLAY</div></a>
 						<br><br>
 					</td>
