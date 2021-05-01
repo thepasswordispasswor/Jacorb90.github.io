@@ -69,7 +69,7 @@ const GAME_DATA = {
 		title: "Antimatter Dimensions NG+++ Condensed",
 		type: "main",
 		url: "https://jacorb90.github.io/NG-plus-3C/",
-		player: localStorage.getItem(btoa("dsAM_"+JSON.parse(atob(localStorage.getItem("AD_aarexModifications"))).current))?JSON.parse(atob(localStorage.getItem(btoa("dsAM_"+JSON.parse(atob(localStorage.getItem("AD_aarexModifications"))).current)))):undefined,
+		player: localStorage.getItem("AD_aarexModifications")?(localStorage.getItem(btoa("dsAM_"+JSON.parse(atob(localStorage.getItem("AD_aarexModifications"))).current))?JSON.parse(atob(localStorage.getItem(btoa("dsAM_"+JSON.parse(atob(localStorage.getItem("AD_aarexModifications"))).current)))):undefined):undefined,
 		lib: Decimal,
 		endgame: Decimal.pow(10, 3.5e15),
 		score() {
