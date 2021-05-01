@@ -145,6 +145,28 @@ button.bought {
 	animation: jac 10s ease infinite;
 }
 
+.jacBG {
+	background: radial-gradient(
+			ellipse farthest-corner at left bottom,
+			#8639fa 0%,
+			#6f2dfc 8%,
+			#4d289c 30%,
+			#40318f 40%,
+			transparent 80%
+		),
+		radial-gradient(
+			ellipse farthest-corner at right top,
+			#888888 0%,
+			#a18cbf 8%,
+			#7e4a9e 25%,
+			#471c57 62.5%,
+			#471c57 100%
+		);
+	background-size: 200% 200%;
+	background-position: 0% 50%;
+	animation: jac 30s ease infinite;
+}
+
 @keyframes jac {
 	0% { background-position: 0% 50%; }
 	12.5% { background-position: 25% 25%; }
