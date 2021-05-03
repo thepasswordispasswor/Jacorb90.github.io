@@ -155,7 +155,7 @@ const GAME_DATA = {
 			
 			let s = 0;
 			if (data.gameOver) s += this.scoreLimit;
-			else s += new Decimal(data.totalPhotons).plus(1).log(this.endgame.log10()).min(1).times(50).toNumber();
+			else s += new Decimal(data.totalPhotons).plus(1).log10().plus(1).log(this.endgame.log10()).min(1).times(50).toNumber();
 			if (isNaN(s)) s = 0;
 			return Math.min(Math.floor(s), this.scoreLimit);
 		},
