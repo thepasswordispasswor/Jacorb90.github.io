@@ -3,7 +3,7 @@ const GAME_DATA = {
 		id: "di",
 		title: "Distance Incremental",
 		type: "main",
-		url: "/games/DistInc.github.io-master/main.html",
+		url: "games/DistInc.github.io-master/main.html",
 		player: localStorage.getItem("dist-inc-saves")?JSON.parse(atob(localStorage.getItem("dist-inc-saves"))):undefined,
 		lib: OmegaNum,
 		endgame: OmegaNum.pow(10, 1e12),
